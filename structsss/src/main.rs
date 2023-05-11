@@ -52,7 +52,7 @@ fn unit_like_structs() {
 }
 
 fn main() {
-    users()
-    tuple_structs()
-    unit_like_structs()
+    users();
+    tuple_structs();
+    unit_like_structs();
 }
