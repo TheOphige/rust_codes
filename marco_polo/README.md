@@ -4,9 +4,13 @@
 
 # rust marco polo game
 A Marco Polo game.
+
 Accepts a string with a name.
+
 If the name is "Marco", returns "Polo".
+
 If the name is "any other value", it returns "not Polo".
+
 An example of a tiny Rust command-line tool in a Docker container.
 About 83.8MB in size.
 
@@ -15,6 +19,7 @@ About 83.8MB in size.
 To run locally
 ```bash
 cargo run play --name "Marco"
+OR
 ./target/debug/marco_polo play --name "Marco"
 ```
 
@@ -27,7 +32,7 @@ docker run --rm -it marco-polo --help
 You can see full invocation here:
 
 ```bash
-➜  rust-docker-cli git:(main) ✗ docker run --rm -it marco-polo play --name Marco
+➜  marco_polo git:(main) ✗ docker run --rm -it marco-polo play --name Marco
 Polo
 ```
 
