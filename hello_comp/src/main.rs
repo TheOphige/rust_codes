@@ -35,10 +35,36 @@
 // }
 
 // full name inline function
-fn main() {
-    let full_name 
-        = |first_name: &str, last_name: &str|
-            format!("{} {}!", first_name, last_name);
+// fn main() {
+//     let full_name 
+//         = |first_name: &str, last_name: &str|
+//             format!("{} {}!", first_name, last_name);
 
-    println!("{}", full_name("taiye", "kehinde"));
+//     println!("{}", full_name("taiye", "kehinde"));
+// }
+
+
+// fn main() {
+//     let multiply_by_2 = |x: i32| x * 2;
+//     let ptr = multiply_by_2;
+//     let result = ptr(10);
+//     println!("{}", result);
+// }
+
+// fn main() {
+//     let ask_for_age = || {
+//         // ask the user for age
+//         // calculate how old in 10 years
+//         10
+//     };
+// }
+
+
+fn process_name(name: &str, callback: fn(&str) -> String) -> String {
+    callback(name)
+}
+
+fn main() {
+    let say_hello_to = |name: &str| format!("Hello, {}!", name);
+    println!("{}", process_name("World", say_hello_to));
 }
