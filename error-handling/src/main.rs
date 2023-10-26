@@ -115,3 +115,68 @@
 
 //     Ok(())
 // }
+
+// fn main() {
+//     let value: Result<&str, Box<dyn std::error::Error>> = Ok("Hello");
+//     match value {
+//         Ok(value) => println!("{}", value),
+//         Err(error) => println!("{}", error),
+//     }
+// }
+
+// if the main error is not neccesary
+// fn main() {
+//     let value: Result<&str, ()> = Err(());
+//     match value {
+//         Ok(value) => println!("{}", value),
+//         Err(_) => println!("Some error occurred"),
+//     }
+// }
+
+// fn get_user_name() -> Result<String, ()> {
+//     Ok("John".to_string())
+//     // or 
+//     // Err(())
+// }
+// fn main() {
+//     let user_name = get_user_name().expect("failed to get user name");
+//     println!("Hello, {}!", user_name);
+// }
+
+// fn get_user_name() -> Result<String, ()> {
+//     Ok("John".to_string())
+//     // Err(())
+// }
+// fn main() {
+//     let is_ok = get_user_name().is_ok();
+//     let is_err = get_user_name().is_err();
+//     println!("{} {}", is_ok, is_err)
+// }
+
+use std::fmt::format;
+
+fn get_first_name() -> Result<String, ()> {
+    Ok("John".to_string())
+}
+
+fn get_last_name() -> Result<String, ()> {
+    // Ok("Doe".to_string())
+    Err(())
+}
+
+fn get_full_name() -> Result<String, ()> {
+    let first_name = get_first_name()?;
+    let last_name = get_last_name()?;
+    Ok(format!("{} {}", first_name, last_name))
+}
+fn main() {
+    let full_name = get_full_name();
+    // match full_name {
+    //     Ok(name) => println!("Hello, {}!", name),
+    //     Err(_) => println!("Error!"),
+    // }
+
+    let length 
+        = full_name.map(|s| s.len()).unwrap_or_default();
+    println!("{}", length);
+}
