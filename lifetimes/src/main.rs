@@ -192,7 +192,7 @@ impl<T, U> Point<T, U> {
 //concrete type f32, meaning 
 // we don’t declare any types after impl.
 impl Point<f32, f32> {
-    fn distance_from_origin(&self) -> f32 {
+    fn _distance_from_origin(&self) -> f32 {
         (self.x.powi(2) + self.y.powi(2)).sqrt()
     }
 }
@@ -213,9 +213,9 @@ fn main() {
     let result = largest(&char_list);
     println!("The largest char is {}", result);
 
-    let both_integer = Point { x: 5, y: 10 };
+    let _both_integer = Point { x: 5, y: 10 };
     let both_float = Point { x: 1.0, y: 4.0 };
-    let integer_and_float = Point { x: 5, y: 4.0 };
+    let _integer_and_float = Point { x: 5, y: 4.0 };
     //println!("{}", both_float);
     println!("x is {:?}, y is {:?}.", both_float.x, both_float.y);
 

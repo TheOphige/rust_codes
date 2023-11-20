@@ -55,7 +55,7 @@ impl Summary for Thread {
 
 // This parameter accepts any type that implements the specified trait. e.g. Tweets, NewsArticle
 // In the body of notify, we can call any methods on item that come from the Summary trait, such as summarize
-pub fn notify(item: &(impl Summary)) {
+pub fn notify(item: &impl Summary) {
     println!("Breaking news! {}", item.summarize());
 }
 // The above (impl Trait) is a simple version of the (trait bound) below
