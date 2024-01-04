@@ -42,8 +42,7 @@ fn call_api_one() -> impl Future<Output = String> {
     async {
         sleep(Duration::from_secs(1)).await;
         "One".to_string();
-    }
-    
+    }   
 }
 
 fn call_api_two() -> impl Future<Output = String> {
@@ -51,9 +50,16 @@ fn call_api_two() -> impl Future<Output = String> {
         sleep(Duration::from_secs(1)).await;
         "Two".to_string();
     }
-    
 }
 
+fn get_async_name() -> impl Future<Output = String> {
+    let name = "John".to_string();
+    // to move variable from outside the asnc block into it
+    async move {
+        format!("Hello {} Doe", name) 
+    }
+    
+}
 
 #[tokio::main]
 async fn main() {
