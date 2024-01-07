@@ -1,0 +1,3 @@
+# JUST A COUPLE OF PROJECTS AND EXCERCISES AS I LEARN RUST
+
+## Happy Learning...🥂
