@@ -65,39 +65,7 @@
 
 
 
-#[derive(Debug)]
-struct Rectangle {
-    width: u32,
-    height: u32,
-}
-
-// methods for the type Rectangle 
-impl Rectangle {
-    fn area(&self) -> u32 {
-        self.width * self.height
-    }
-
-    // creating method that calls another instance of the type Rectangle
-    fn can_hold(&self, other: &Rectangle) -> bool {
-        self.width > other.width && self.height > other.height
-    }
-}
-
-impl Rectangle {
-    fn width(&self) -> bool {
-        self.width > 0
-    }
-}
-
-// associated function square(its not necessarily a method)
-impl Rectangle {
-    fn square(size: u32) -> Self {
-        Self {
-            width: size,
-            height: size,
-        }
-    }
-}
+use rectangles::Rectangle;
 
 fn main() {
     let rect1 = Rectangle {
