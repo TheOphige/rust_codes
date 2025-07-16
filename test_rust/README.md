@@ -1,6 +1,12 @@
-# rust-new-project-template
-A good starting point for a new Rust project
 
-## References
+# Basic Arithmetic Functions in Rust
 
-* [rust-cli-template](https://github.com/kbknapp/rust-cli-template)
+This project demonstrates simple arithmetic operations in Rust. It provides functions for addition, subtraction, multiplication, and division, and runs them from the main program.
+
+## Features
+
+- Implements `add`, `sub`, `mul`, and `div` functions
+- Runs each function with example values in `main.rs`
+- Prints the results to the console
+
+This project is a basic example for learning Rust function definitions, module usage, and console output.

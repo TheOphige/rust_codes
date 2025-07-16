@@ -3,7 +3,7 @@ use clap::Parser;
 
 #[derive(Parser)]
 #[command(name = "deduper")]
-#[command(author = "Noah Gift")]
+#[command(author = "Theophilus Ige")]
 #[command(version = "1.0")]
 #[command(about = "Finds duplicate files on the filesystem", long_about = None)]
 struct Cli {

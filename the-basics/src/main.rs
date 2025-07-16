@@ -52,7 +52,7 @@ fn whiler() {
 // Arrays
 fn arrays() {
     // Mutable
-    let mut arr: [i32, 3] = [4, 5, 3];
+    let mut arr: [i32; 3] = [4, 5, 3];
     arr[0] =1;
     arr[1] =2;
     for x in &arr {
@@ -96,13 +96,13 @@ fn iterating() {
     // By reference (.iter) - enumerated
     for x in arr.iter().enumerate() {
         // gives you a tuple: (index, value)
-        println!("{}", x);
+        println!("{:?}", x);
     }
     // By value (.into_iter) will not reference variable but pull into
     for item in arr.iter().enumerate() {
         // You can choose to do both index and value
-        let (i, x): (usize, i32) = item;
-        println!("Index: {}, Value: ()", i, x);
+        let (i, x): (usize, &i32) = item;
+        println!("Index: {}, Value: {:?}", i, x);
     }
 
     println!("------------------------");
